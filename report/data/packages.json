@@ -1,0 +1,21 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "wedd_test",
+    "children" : [ {
+      "name" : "test_122",
+      "uid" : "4b69bd43d9566eb1",
+      "parentUid" : "37593becddabad5d74800003b408966d",
+      "status" : "passed",
+      "time" : {
+        "start" : 1595904275150,
+        "stop" : 1595904275231,
+        "duration" : 81
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "37593becddabad5d74800003b408966d"
+  } ]
+}

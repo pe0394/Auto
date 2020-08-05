@@ -1,0 +1,25 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-EKLI2C5",
+    "children" : [ {
+      "name" : "16108-MainThread",
+      "children" : [ {
+        "name" : "test_122",
+        "uid" : "4b69bd43d9566eb1",
+        "parentUid" : "a404f817cd14cc5113260d0da358f93f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1595904275150,
+          "stop" : 1595904275231,
+          "duration" : 81
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "a404f817cd14cc5113260d0da358f93f"
+    } ],
+    "uid" : "8b633d41e2372ae37ac55af0aa0dbaf3"
+  } ]
+}

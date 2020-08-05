@@ -1,0 +1,25 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "wedd_test",
+    "children" : [ {
+      "name" : "Testdenglu",
+      "children" : [ {
+        "name" : "test_122",
+        "uid" : "4b69bd43d9566eb1",
+        "parentUid" : "87e85f8f3b7b8b716c06f93d4e55b7c6",
+        "status" : "passed",
+        "time" : {
+          "start" : 1595904275150,
+          "stop" : 1595904275231,
+          "duration" : 81
+        },
+        "flaky" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "87e85f8f3b7b8b716c06f93d4e55b7c6"
+    } ],
+    "uid" : "6da728d48e857d6dfa140521fd34cd57"
+  } ]
+}
