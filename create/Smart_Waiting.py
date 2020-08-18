@@ -186,7 +186,7 @@ class waitutil:
 
     def invisibility_of_element_located(self, location_type, locator_expression, *args) -> WebElement:
         """
-        判断某个元素在是否存在于dom或不可见,如果可见返回False,不可见返回这个元素
+        判断某个元素在是否不在dom或不可见,如果可见返回False,不可见返回这个元素
         :param location_type:
         :param locator_expression:
         :param args:
