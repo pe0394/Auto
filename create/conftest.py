@@ -1,6 +1,8 @@
+# coding:utf-8
+
 from selenium import webdriver
 import pytest
-
+import time
 
 driver = None
 
@@ -38,5 +40,5 @@ def _capture_screenshot():
 def browser():
     global driver
     if driver is None:
-        driver =webdriver.Chrome()
+        driver =webdriver.Chrome('d:\\chromedriver.exe')
     return driver

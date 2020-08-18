@@ -1,6 +1,6 @@
 from locust import HttpUser, task, between, SequentialTaskSet
 from create import get_session
-from log_result import loadLogger
+from create.log_result import loadLogger
 import queue, csv, base64
 from locust.contrib.fasthttp import FastHttpUser
 
