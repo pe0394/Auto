@@ -1,6 +1,5 @@
 import requests
-from get_session import getsession
-import base64
+
 url = 'http://webservice.forclass.net/ForClassService.asmx/Userlogin?'
 data = 'account=rd0006&password=jQ7qCVbbvtJGHu2qEwsNFA==%20&xStr={"timestamp":"1563792715"}&typeIdx=1'
 response = requests.get(url + data)

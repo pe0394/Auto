@@ -4,6 +4,9 @@ from create.Paas_Login import Loginfor
 import time
 import pyperclip
 from create import upload_file
+from create.screenshot import getscreenshot
+
+
 driver = webdriver.Chrome('d:\\chromedriver.exe')
 waitutil = waitutil(driver)
 Loginfor = Loginfor(driver)
@@ -21,7 +24,7 @@ def test_1():   #资源中心创建教学资源，数字试题，教学应用，
     # 创建
     #判断loading不在DOM中显示再去点击
     # waitutil.element_to_be_clickable('css', '.ivu-page-item-active')#判断页面底部页码存在
-    waitutil.invisibility_of_element_located('css', '.loading-box', 1, 0.3)
+    waitutil.invisibility_of_element_located('css', '.loading-box', 30, 0.3)
     waitutil.element_to_be_clickable('css', '[class="creat cursor"]', 30, 0.3).click()
     #教学资源标签
     #非input标签上传文件
@@ -54,7 +57,7 @@ def test_1():   #资源中心创建教学资源，数字试题，教学应用，
     time.sleep(1)
     # 创建
     #判断loading不在DOM中显示再去点击
-    waitutil.invisibility_of_element_located('css', '.loading-box', 1)
+    waitutil.invisibility_of_element_located('css', '.loading-box', 30, 0.3)
     waitutil.element_to_be_clickable('css', '[class="creat cursor"]', 30, 0.3).click()
     # 数字试卷标签
     waitutil.visibility_of_element_located('xpath', "//div[contains(text(),'数字试题')]", 30, 0.3).click()
@@ -102,7 +105,7 @@ def test_1():   #资源中心创建教学资源，数字试题，教学应用，
     time.sleep(1)
     # 创建
     #判断loading不在DOM中显示再去点击
-    waitutil.invisibility_of_element_located('css', '.loading-box', 1)
+    waitutil.invisibility_of_element_located('css', '.loading-box', 30, 0.3)
     waitutil.element_to_be_clickable('css', '[class="creat cursor"]', 30, 0.3).click()
     # 教学应用标签
     waitutil.visibility_of_element_located('xpath', "//div[contains(text(),'教学应用')]").click()
@@ -145,7 +148,7 @@ def test_1():   #资源中心创建教学资源，数字试题，教学应用，
     time.sleep(1)
     # 创建
     #判断loading不在DOM中显示再去点击
-    waitutil.invisibility_of_element_located('css', '.loading-box', 1)
+    waitutil.invisibility_of_element_located('css', '.loading-box', 30, 0.3)
     waitutil.element_to_be_clickable('css', '[class="creat cursor"]', 30, 0.3).click()
     # 互动微课标签
     waitutil.visibility_of_element_located('xpath', "//div[contains(text(),'互动微课')]").click()
@@ -186,3 +189,5 @@ def test_1():   #资源中心创建教学资源，数字试题，教学应用，
     # 关闭
     waitutil.visibility_of_element_located('xpath', '/html/body/div[10]/div[2]/div/div/a/i').click()
     waitutil.visibility_of_element_located('xpath', "//span[contains(text(),'发布')]").click()
+
+    driver.quit()

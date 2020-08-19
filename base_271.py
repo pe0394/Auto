@@ -1,12 +1,11 @@
-from locust import HttpUser, task, between, SequentialTaskSet
-from create import get_session
-from create.log_result import loadLogger
+from locust import task, between, SequentialTaskSet
+from get_session import getsession
 import queue, csv, base64
 from locust.contrib.fasthttp import FastHttpUser
 
 class MySeqTasks(SequentialTaskSet):
     logindata = queue.Queue()
-    with open(r'/test/username_271.csv', 'r') as f:
+    with open(r'/auto/test/username_271.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
             logindata.put(row[0])
@@ -29,7 +28,7 @@ class MySeqTasks(SequentialTaskSet):
             else:
                 response.failure()
                 print('登录失败'+ response.text)
-            self.session = get_session.getsession(response.text)
+            self.session = getsession(response.text)
                 # print(session)
         return self.session
 
@@ -65,7 +64,7 @@ class MySeqTasks(SequentialTaskSet):
 
     @task
     def catalog(self):
-        self.logger = loadLogger(filePath='/Log', fileName='11-13-logs')
+        # self.logger = loadLogger(filePath='/Log', fileName='11-13-logs')
         url = 'http://api.forclass.net/Course/api/v1/Asset/catalog'
         headers ={'Authorization':'Bearer '+self.base_session}
         data = {"bookId": 0,"uIdx": 0,"periodId": 0,"subjectId": 0,"editionId": 0,"termId":0}
@@ -76,7 +75,7 @@ class MySeqTasks(SequentialTaskSet):
             else:
                 response.failure()
                 print('从资源库获取的全部目录结构失败'+ response.text)
-        self.logger.get_locust_Hook()
+        # self.logger.get_locust_Hook()
 
 class WebsiteUser(FastHttpUser):
     host = 'http://webservice.forclass.net'
